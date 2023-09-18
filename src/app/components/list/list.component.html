@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let post of posts">
+    <div class="card">
+      <img class="post-img" src="{{post.thumbnail.includes('http') ? post.thumbnail : './assets/background-img.png'}}" alt="post thumbnail">
+      <div class="post-text">
+        <span>{{post.title}}</span>
+        <span>u/{{post.author}}</span>
+        <span>{{post.created}}</span>
+      </div>
+      <div class="buttons-container">
+        <button>Salva</button>
+        <a href="{{post.url}}"><button>Vai al post</button></a>
+        <!-- url porta all'eventuale url contenuto nel post, mentre il permalink porta a Reddit -->
+        <a href="{{'https://www.reddit.com/'+post.permalink}}"><button>Vai a Reddit</button></a>
+      </div>
+    </div>
+  </li>
+</ul>

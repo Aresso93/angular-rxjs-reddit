@@ -1,0 +1,16 @@
+.card{
+  display: flex;
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+.post-img{
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.post-text{
+  display: flex;
+  flex-direction: column;
+}
